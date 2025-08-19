@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Brain, Heart, Smile, Sparkles, ArrowRight, BookOpen, Play, Zap } from 'lucide-react'
+import { Brain, Sparkles, ArrowRight, BookOpen, Play, Zap } from 'lucide-react'
 
 interface HomePageProps {
   setCurrentPage: (page: string) => void

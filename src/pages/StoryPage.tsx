@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, ArrowLeft, Heart, Brain, MessageCircle, Sparkles, BookOpen } from 'lucide-react'
+import { Link } from 'react-router-dom' 
+import { motion } from 'framer-motion'
+import { ArrowRight, ArrowLeft, BookOpen } from 'lucide-react'
 
 interface StoryPageProps {
   setCurrentPage: (page: string) => void
@@ -23,7 +23,6 @@ interface StoryStep {
 
 const StoryPage: React.FC<StoryPageProps> = ({ setCurrentPage }) => {
   const [currentStep, setCurrentStep] = useState(0)
-  const [showExercise, setShowExercise] = useState(false)
   const [exerciseAnswer, setExerciseAnswer] = useState<number | null>(null)
   const [showExplanation, setShowExplanation] = useState(false)
 
@@ -84,7 +83,6 @@ const StoryPage: React.FC<StoryPageProps> = ({ setCurrentPage }) => {
   const handleNext = () => {
     if (currentStep < storySteps.length - 1) {
       setCurrentStep(currentStep + 1)
-      setShowExercise(false)
       setExerciseAnswer(null)
       setShowExplanation(false)
     }
@@ -93,7 +91,6 @@ const StoryPage: React.FC<StoryPageProps> = ({ setCurrentPage }) => {
   const handlePrevious = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1)
-      setShowExercise(false)
       setExerciseAnswer(null)
       setShowExplanation(false)
     }

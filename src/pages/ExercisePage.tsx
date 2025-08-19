@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, ArrowLeft, CheckCircle, XCircle, Star, Trophy, Brain } from 'lucide-react'
+import { ArrowRight, ArrowLeft, CheckCircle, XCircle, Trophy, Brain } from 'lucide-react'
 
 interface ExercisePageProps {
   setCurrentPage: (page: string) => void
